@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="root@172.17.0.1:2022">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/code/constrained_tree_edit_distance_release/src" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="root@172.17.0.1:2022 password">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/code/constrained_tree_edit_distance_release/src" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
