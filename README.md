@@ -2,29 +2,29 @@
 
 by Yuki Arase (Osaka University)
 
-This repository provides implementation of the phrase alignment method based on the constrained tree edit distance proposed in the following paper.
+This repository provides an implementation of the phrase alignment method based on the constrained tree edit distance proposed in the following paper.
 
 Yuki Arase and Jun'ichi Tsujii. 2020. [Compositional Phrase Alignment and Beyond](https://www.aclweb.org/anthology/2020.emnlp-main.125/). in Proc. of the Conference on Empirical Methods in Natural Language Processing (EMNLP), pp. 1611-1623.  
 
 ## Prerequisites
-Pleaes make sure to install all the dependent libraries in ``requirements.txt``
+Please make sure to install all the dependent libraries in ``requirements.txt``
 
 SPADE and ESPADA datasets are downloadable from LDC (Linguistic Data Consortium)
 * [SPADE](https://catalog.ldc.upenn.edu/LDC2018T09)
-* ESPADA (will be released from LDC in May, 2021)
+* ESPADA (will be released from LDC in May 2021)
 
-Please place these corpora (xml files) in ```data``` directory (this repository provides just samples for debugging).
+Please place these corpora (xml files) in the ```data``` directory (this repository provides just samples for debugging).
 
 ## How to 
 ### Model names
-Following labels correspond to models described in the paper.
+The following labels correspond to models described in the paper.
 
 * ```BERTTrainer```: BERT model with simple fine-tuning
 * ```BERT1F```: The proposed model (BERT+SimMatrix)
 * ```BERT1E```: The proposed model using [CLS] instead of SimMatrix (BERT+[CLS])
 
 ### Trained models
-Trained models are distributed at [Zenodo](http://doi.org/10.5281/zenodo.4686663). Note that ALIR and ALIP values of these models are slightly different from what were reported in the paper, because the paper reports the average performance of 10 models initialized with random seeds. 
+Trained models are distributed at [Zenodo](http://doi.org/10.5281/zenodo.4686663). Note that ALIR and ALIP values of these models are slightly different from what was reported in the paper because the paper reports the average performance of 10 models initialized with random seeds. 
 
 ### Fine-tune the BERT model
 Pleaes set hyper-parameters as you want.
