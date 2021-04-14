@@ -24,7 +24,7 @@ Following labels correspond to models described in the paper.
 * ```BERT1E```: The proposed model using [CLS] instead of SimMatrix (BERT+[CLS])
 
 ### Trained models
-Trained models are provided in ```model``` directory. Note that ALIR and ALIP values of these models are slightly different from what were reported in the paper, because the paper reports the average performance of 10 models initialized with random seeds. 
+Trained models are distributed at [Zenodo](http://doi.org/10.5281/zenodo.4686663). Note that ALIR and ALIP values of these models are slightly different from what were reported in the paper, because the paper reports the average performance of 10 models initialized with random seeds. 
 
 ### Fine-tune the BERT model
 Pleaes set hyper-parameters as you want.
