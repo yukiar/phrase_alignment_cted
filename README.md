@@ -11,7 +11,7 @@ Please make sure to install all the dependent libraries in ``requirements.txt``
 
 SPADE and ESPADA datasets are downloadable from LDC (Linguistic Data Consortium)
 * [SPADE](https://catalog.ldc.upenn.edu/LDC2018T09)
-* ESPADA (will be released from LDC in 2021/5/15)
+* ESPADA (will be released from LDC on 2021/5/15)
 
 Please place these corpora (xml files) in the ```data``` directory (the current repository provides just samples for debugging).
 
@@ -49,6 +49,8 @@ Download a FastText model you like, and specify the path to the model ```--model
 python ./main.py --out_dir ../out/ --model_name FastText --model_dir ../fasttext/crawl-300d-2M-subword.bin --pooling mean --null_thresh 0.8
 python ./baseline_wo_ted.py --out_dir ../out/ --model_name FastText --model_dir ../fasttext/crawl-300d-2M-subword.bin --pooling mean --null_thresh 0.75
 ```
+### Alignment of your own dataset
+Please revise ```src/data.py``` to adapt to your data format. 
 
 ## Citation
 When you use our codes in your projects, please cite the following paper.
