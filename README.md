@@ -2,18 +2,18 @@
 
 by Yuki Arase (Osaka University)
 
-This repository provides an implementation of the phrase alignment method based on the constrained tree edit distance proposed in the following paper.
+This repository provides an implementation of the phrase alignment method based on the constrained tree edit distance.
 
-Yuki Arase and Jun'ichi Tsujii. 2020. [Compositional Phrase Alignment and Beyond](https://www.aclweb.org/anthology/2020.emnlp-main.125/). in Proc. of the Conference on Empirical Methods in Natural Language Processing (EMNLP), pp. 1611-1623.  
+Yuki Arase and Jun'ichi Tsujii. 2020. [Compositional Phrase Alignment and Beyond](https://www.aclweb.org/anthology/2020.emnlp-main.125/). in Proc. of the Conference on Empirical Methods in Natural Language Processing (EMNLP), pp. 1611-1623. 
 
 ## Prerequisites
 Please make sure to install all the dependent libraries in ``requirements.txt``
 
 SPADE and ESPADA datasets are downloadable from LDC (Linguistic Data Consortium)
 * [SPADE](https://catalog.ldc.upenn.edu/LDC2018T09)
-* ESPADA (will be released from LDC in May 2021)
+* ESPADA (will be released from LDC in 2021/5/15)
 
-Please place these corpora (xml files) in the ```data``` directory (this repository provides just samples for debugging).
+Please place these corpora (xml files) in the ```data``` directory (the current repository provides just samples for debugging).
 
 ## How to 
 ### Model names
@@ -53,7 +53,7 @@ python ./baseline_wo_ted.py --out_dir ../out/ --model_name FastText --model_dir 
 ## Citation
 When you use our codes in your projects, please cite the following paper.
 
-Yuki Arase and Jun'ichi Tsujii. 2020. Compositional Phrase Alignment and Beyond. in Proc. of the Conference on Empirical Methods in Natural Language Processing (EMNLP), pp. 1611-1623.  
+Yuki Arase and Jun'ichi Tsujii. 2020. Compositional Phrase Alignment and Beyond. in Proc. of the Conference on Empirical Methods in Natural Language Processing (EMNLP), pp. 1611-1623. 
 ```
 @inproceedings{arase-tsujii-2020-compositional,
     title = "Compositional Phrase Alignment and Beyond",
