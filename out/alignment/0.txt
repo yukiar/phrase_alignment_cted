@@ -1,0 +1,19 @@
+c0 The fat cat sat on the mat ||| c0 The plump tabby cat lay down on the floor mat 
+c6 sat on the mat ||| c8 lay down on the floor mat 
+c1 The fat cat ||| c1 The plump tabby cat 
+c8 on the mat ||| c12 on the floor mat 
+c10 the mat ||| c14 the floor mat 
+c3 fat cat ||| c3 plump tabby cat 
+c11 the ||| c15 the 
+c12 mat ||| c16 floor mat 
+c5 cat ||| c7 cat 
+c7 sat ||| c10 lay 
+c4 fat ||| c4 plump 
+c2 The ||| c2 The 
+c9 on ||| c13 on 
+--- ||| c17 floor 
+--- ||| c6 tabby 
+--- ||| c5 tabby cat 
+--- ||| c9 lay down 
+--- ||| c18 mat 
+--- ||| c11 down 

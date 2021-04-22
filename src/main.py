@@ -48,7 +48,10 @@ def decode():
     add_bos_eos = True if 'bert' in model_type.lower() else False
 
     print('Load xml files...')
-    s_tokens, t_tokens, s_trees, t_trees, _, _, _ = load_corpus('../data/SPADE/', 'test', add_bos_eos, True)
+    # Decode SPADE test set
+    # s_tokens, t_tokens, s_trees, t_trees, _, _, _ = load_corpus('../data/SPADE/', 'test', add_bos_eos, True)
+    # Decode your own dataset: set name of your xml directory
+    s_tokens, t_tokens, s_trees, t_trees, _, _, _ = load_corpus('../data/name_of_your_xml_dir/', None, add_bos_eos, True)
     if 'bert' in model_type.lower():
         print('Encoding sentences by BERT...')
         sim.encode(s_tokens, t_tokens, s_trees, t_trees)

@@ -146,6 +146,7 @@ def load_corpus(path, dev_or_test, bos_eos, text_match):
 
     return s_tokens, t_tokens, s_trees, t_trees, annotator_A, annotator_B, annotator_C
 
+
 def get_annotations(s_trees, t_trees, annot_label):
     all_annotations = []
     for s_tree, t_tree in zip(s_trees, t_trees):
@@ -201,9 +202,9 @@ def _recursive_trace_postorder(node, pid, tree, tokens, id_idx_dic, bos_eos):
     if len(node) == 1:  # unary or pre-terminal
         child = node[0]
         nid = node.get('id').strip(' ')
-        pa1 = node.get('pa1').strip(' ')
-        pa2 = node.get('pa2').strip(' ')
-        pa3 = node.get('pa3').strip(' ')
+        pa1 = node.get('pa1').strip(' ') if 'pa1' in node.attrib else '-1'
+        pa2 = node.get('pa2').strip(' ') if 'pa2' in node.attrib else '-1'
+        pa3 = node.get('pa3').strip(' ') if 'pa3' in node.attrib else '-1'
         if child.get('id')[0] == 't':  # pre-terminal
             tokens.append(child.text)
 
@@ -226,9 +227,9 @@ def _recursive_trace_postorder(node, pid, tree, tokens, id_idx_dic, bos_eos):
             return start, end, len(tree) - 1
     else:
         nid = node.get('id').strip(' ')
-        pa1 = node.get('pa1').strip(' ')
-        pa2 = node.get('pa2').strip(' ')
-        pa3 = node.get('pa3').strip(' ')
+        pa1 = node.get('pa1').strip(' ') if 'pa1' in node.attrib else '-1'
+        pa2 = node.get('pa2').strip(' ') if 'pa2' in node.attrib else '-1'
+        pa3 = node.get('pa3').strip(' ') if 'pa3' in node.attrib else '-1'
         start, _, left_child_idx = _recursive_trace_postorder(node[0], nid, tree, tokens, id_idx_dic, bos_eos)
         _, end, right_child_idx = _recursive_trace_postorder(node[1], nid, tree, tokens, id_idx_dic, bos_eos)
 

@@ -50,7 +50,13 @@ python ./main.py --out_dir ../out/ --model_name FastText --model_dir ../fasttext
 python ./baseline_wo_ted.py --out_dir ../out/ --model_name FastText --model_dir ../fasttext/crawl-300d-2M-subword.bin --pooling mean --null_thresh 0.75
 ```
 ### Alignment of your own dataset
-Please revise ```src/data.py``` to adapt to your data format. 
+1. Parse your dataset with [Enju](https://mynlp.is.s.u-tokyo.ac.jp/enju/) parser. Make sure to flag ```-xml``` to obtain outputs in an xml format
+2. Rename your source and target xml files to follow the rule: ```s-(\d+).xml``` and ```t-(\d+).xml``` (```(\d+)``` is the index of a pair). E.g., s-001.xml and t-001.xml
+3. Place your xml files to ```../data/name_of_your_xml_dir/``` and change the path in ```decode()``` function in ```main.py```
+4. Run ```main.py``` flagging ```--decode```
+5. Alignment results will be saved in the output directory: ```index.txt``` are alignment results *without* postprocessing and ```PP_index.txt``` are alignments *with* postprocessing.
+
+For your reference, ```data/Enju/``` provides simple example inputs (Enju xml files) and ```out/alignment/``` provides corresponding alignment outputs.
 
 ## Citation
 When you use our codes in your projects, please cite the following paper.
