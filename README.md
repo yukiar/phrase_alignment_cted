@@ -4,14 +4,16 @@ by Yuki Arase (Osaka University)
 
 This repository provides an implementation of the phrase alignment method based on the constrained tree edit distance.
 
+[ESPADA](https://catalog.ldc.upenn.edu/LDC2021T10) is now available online!
+
 Yuki Arase and Jun'ichi Tsujii. 2020. [Compositional Phrase Alignment and Beyond](https://www.aclweb.org/anthology/2020.emnlp-main.125/). in Proc. of the Conference on Empirical Methods in Natural Language Processing (EMNLP), pp. 1611-1623. 
 
 ## Prerequisites
 Please make sure to install all the dependent libraries in ``requirements.txt``
 
 SPADE and ESPADA datasets are downloadable from LDC (Linguistic Data Consortium)
-* [SPADE](https://catalog.ldc.upenn.edu/LDC2018T09)
-* ESPADA (will be released from LDC on 2021/5/15)
+* [SPADE](https://catalog.ldc.upenn.edu/LDC2018T09): Test set
+* [ESPADA](https://catalog.ldc.upenn.edu/LDC2021T10): Training and dev sets 
 
 Please place these corpora (xml files) in the ```data``` directory (the current repository provides just samples for debugging).
 
